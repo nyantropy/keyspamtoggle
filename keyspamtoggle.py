@@ -43,7 +43,7 @@ def toggle_spam():
     #start a thread if we need to start a spam thread - this will join automatically, since it probes the tmp file
     if new_state == "1":
         if thread is None or not thread.is_alive():
-            thread = threading.Thread(target=spam_f12)
+            thread = threading.Thread(target=spam)
             thread.start()
 
 #toggle spam whenever script is run
